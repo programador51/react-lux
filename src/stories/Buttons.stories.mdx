@@ -1,0 +1,122 @@
+import { Meta } from "@storybook/addon-docs";
+import { Button } from "../tempIndex.tsx";
+
+<Meta title="Buttons" />
+
+# Overview
+
+You can pass the arguments that has a `button` tag (onClick, id, name, style, type, etc...)
+
+# Default
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-between",
+  }}
+>
+  <Button>Primary</Button>
+  <Button theme="secondary">Secondary</Button>
+  <Button theme="info">Info</Button>
+  <Button theme="warning">Warning</Button>
+  <Button theme="success">Success</Button>
+  <Button theme="danger">Danger</Button>
+  <Button theme="light">Light</Button>
+  <Button theme="dark">Dark</Button>
+  <Button theme="link">Link</Button>
+</div>
+
+```tsx
+import React from 'react';
+import { Button } from "react-lux";
+
+function App() {
+  return (
+    <Button>Primary</Button>
+    <Button theme="secondary">Secondary</Button>
+    <Button theme="info">Info</Button>
+    <Button theme="warning">Warning</Button>
+    <Button theme="success">Success</Button>
+    <Button theme="danger">Danger</Button>
+    <Button theme="light">Light</Button>
+    <Button theme="dark">Dark</Button>
+    <Button theme="link">Link</Button>
+  );
+}
+
+export default App;
+```
+
+<hr></hr>
+
+# Disabled
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-between",
+  }}
+>
+  <Button disabled>Primary</Button>
+  <Button theme="secondary" disabled>
+    Secondary
+  </Button>
+  <Button theme="info" disabled>
+    Info
+  </Button>
+  <Button theme="warning" disabled>
+    Warning
+  </Button>
+  <Button theme="success" disabled>
+    Success
+  </Button>
+  <Button theme="danger" disabled>
+    Danger
+  </Button>
+  <Button theme="light" disabled>
+    Light
+  </Button>
+  <Button theme="dark" disabled>
+    Dark
+  </Button>
+  <Button theme="link" disabled>
+    Link
+  </Button>
+</div>
+
+```tsx
+import React from 'react';
+import { Button } from "react-lux";
+
+function App() {
+  return (
+    <Button disabled>Primary</Button>
+    <Button theme="secondary" disabled>
+        Secondary
+    </Button>
+    <Button theme="info" disabled>
+        Info
+    </Button>
+    <Button theme="warning" disabled>
+        Warning
+    </Button>
+    <Button theme="success" disabled>
+        Success
+    </Button>
+    <Button theme="danger" disabled>
+        Danger
+    </Button>
+    <Button theme="light" disabled>
+        Light
+    </Button>
+    <Button theme="dark" disabled>
+        Dark
+    </Button>
+    <Button theme="link" disabled>
+        Link
+    </Button>
+  );
+}
+
+export default App;
+```

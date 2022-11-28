@@ -1,0 +1,20 @@
+.luxRadio {
+  input {
+    display: none;
+  }
+
+  label {
+    width: 13.5px;
+    height: 13.5px;
+    display: inline-flex;
+    border-radius: 50%;
+    border: 1px solid var(--colorInputLux);
+    background-color: var(--backgroundInputLux);
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  input:checked + label {
+    border: 3.5px solid var(--primaryColorLux);
+  }
+}

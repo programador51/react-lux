@@ -1,0 +1,66 @@
+import { Meta } from "@storybook/addon-docs";
+import { Pagination } from "../tempIndex.tsx";
+
+<Meta title="Components/Pagination" />
+
+# Overview
+
+If you need tabulate data, there's a component that can handle the pagination for these information
+
+<Pagination
+  limitPages={10}
+  currentPage={1}
+  pages={20}
+  onPaginate={(page) =>
+    alert(
+      `The page to fetch will be ${page}, you can put your own fetch function here to updata the tabulated data when this callbacks executes`
+    )
+  }
+/>
+
+```ts
+export interface PropsPagination {
+  /**
+   * Current page of the data
+   */
+  currentPage?: number;
+
+  /**
+   * Number of pages founded for the pagination
+   */
+  pages?: number;
+
+  /**
+   * Limit of buttons to paginate the data
+   */
+  limitPages?: number;
+  /**
+   * Function that executes when user clicks on the navagition (arrows or specific number)
+   */
+  onPaginate?: (page: number) => void;
+}
+```
+
+## Code
+
+```tsx
+import React from "react";
+import { Pagination } from "react-lux";
+
+function App() {
+  return (
+    <Pagination
+      limitPages={10}
+      currentPage={1}
+      pages={20}
+      onPaginate={(page) =>
+        alert(
+          `The page to fetch will be ${page}, you can put your own fetch function here to updata the tabulated data when this callbacks executes`
+        )
+      }
+    />
+  );
+}
+
+export default App;
+```

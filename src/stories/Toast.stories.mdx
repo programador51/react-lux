@@ -1,0 +1,83 @@
+import { Meta } from "@storybook/addon-docs";
+import { ParentComponent } from "../demos/toast";
+
+<Meta title="Components/Toast" />
+
+# Overview
+
+You can display toasts on your entire application whenever you need it. You just need to encapsulate your entire application with `ToastProvider` and use the methods on any React FC in order to append one item on the toast list.
+
+<ParentComponent />
+
+<br></br>
+<br></br>
+
+## Code
+
+```tsx
+// App.tsx
+import React from "react";
+import { ToastProvider } from "react-lux";
+import YourOwnComponent from "../your_path/YourOwnComponent.tsx";
+
+function App() {
+  return (
+    <ToastProvider>
+      <YourOwnComponent />
+    </ToastProvider>
+  );
+}
+
+export default App;
+```
+
+<hr></hr>
+
+```tsx
+// YourOwnComponent.tsx
+import React, { useContext } from "react";
+import { ContextToast } from "react-lux";
+
+function YourOwnComponent() {
+  const { addToast } = useContext(ContextToast);
+
+  const [info, setInfo] = useState({
+    title: "",
+    body: "",
+  });
+
+  const appendToast = () => {
+    addToast({
+      body: info.body,
+      title: info.title,
+    });
+  };
+
+  return (
+    <>
+      <InputText
+        placeholder="Toast title"
+        onChange={(e) =>
+          setInfo((state) => ({ ...state, title: e.target.value }))
+        }
+      />
+
+      <InputText
+        onChange={(e) =>
+          setInfo((state) => ({ ...state, body: e.target.value }))
+        }
+        placeholder="Toast body"
+      />
+
+      <Button
+        onClick={appendToast}
+        disabled={info.title === "" || info.body === ""}
+      >
+        Add
+      </Button>
+    </>
+  );
+}
+
+export default YourOwnComponent;
+```

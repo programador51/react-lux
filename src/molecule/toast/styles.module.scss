@@ -1,0 +1,33 @@
+.luxToast {
+  border: 1.25px solid rgb(225, 225, 225);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  font-family: var(--fontlux);
+  background-color: white;
+  margin: 10px 0 0 0;
+}
+
+.title {
+  padding: 0.5rem;
+  color: #919aa1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  span:nth-child(2) {
+    padding: 3.5px 11px;
+    cursor: pointer;
+  }
+  border: 1px solid rgb(235, 235, 235);
+  border-style: none none solid none;
+  span:nth-child(1) {
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.body {
+  color: var(--colorInputLux);
+  padding: 0.5rem;
+}

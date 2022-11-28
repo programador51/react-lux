@@ -1,0 +1,90 @@
+.primary {
+  background-color: #1a1a1a;
+  color: #fff;
+  &:hover {
+    background-color: #161616;
+  }
+}
+
+.primary,
+.secondary,
+.info,
+.warning,
+.danger,
+.light,
+.dark,
+.link,
+.success {
+  &:disabled {
+    cursor: not-allowed;
+  }
+  cursor: pointer;
+  border: none;
+  font-family: var(--fontlux);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  &:disabled {
+    opacity: 0.5;
+  }
+  transition: background-color 0.15s ease-in;
+}
+
+.secondary {
+  background-color: #fff;
+  color: #000;
+}
+
+.success {
+  background-color: #4bbf73;
+  color: #fff;
+  &:hover {
+    background-color: #40a262;
+  }
+}
+
+.info {
+  background-color: #1f9bcf;
+  color: #fff;
+  &:hover {
+    background-color: #1a84b0;
+  }
+}
+
+.warning {
+  background-color: #f0ad4e;
+  color: #fff;
+  &:hover {
+    background-color: #f2b969;
+  }
+}
+
+.danger {
+  background-color: #d9534f;
+  color: #fff;
+  &:hover {
+    background-color: #b84743;
+  }
+}
+
+.light {
+  background-color: #fff;
+  color: #000;
+  &:hover {
+    background-color: #d9d9d9;
+  }
+}
+
+.dark {
+  background-color: #343a40;
+  color: #fff;
+  &:hover {
+    background-color: #52585d;
+  }
+}
+
+.link {
+  text-decoration: underline;
+  background-color: #fff;
+  color: #000;
+}

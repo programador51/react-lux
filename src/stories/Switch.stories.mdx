@@ -1,0 +1,33 @@
+import { Meta } from "@storybook/addon-docs";
+import { DemoSwitch } from "../demos/switch";
+
+<Meta title="Forms/Switch" />
+
+# Switch
+
+<DemoSwitch />
+
+```tsx
+import React, { useState } from "react";
+import { Switch } from "react-lux";
+
+function App() {
+  const [isAgree, setIsAgree] = useState(false);
+
+  return (
+    <div>
+      <p>Do you agree share your personal information with the enterprise ?</p>
+
+      <div>
+        <Switch
+          checked={isAgree}
+          onChange={(e) => setIsAgree(e.target.checked)}
+        />
+        <span>{isAgree ? "- Yes" : "- No"}</span>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+```

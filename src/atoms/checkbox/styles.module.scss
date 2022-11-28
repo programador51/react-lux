@@ -1,0 +1,19 @@
+.luxCheckbox {
+  display: inline-flex;
+  input {
+    display: none;
+  }
+  input + label {
+    display: inline-block;
+    height: 12.5px;
+    width: 12.5px;
+    cursor: pointer;
+    background-color: var(--backgroundInputLux);
+    border: 1px solid #939699;
+  }
+
+  input:checked + label {
+    background-image: url("../../images/check.svg");
+    background-color: var(--primaryColorLux);
+  }
+}

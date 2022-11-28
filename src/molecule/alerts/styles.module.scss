@@ -1,0 +1,72 @@
+.warning,
+.success,
+.primary,
+.info,
+.secondary,
+.danger {
+  padding: 1rem;
+  font-family: var(--fontlux);
+}
+
+.warning {
+  background-color: #fcefdc;
+
+  * {
+    color: #90682f;
+  }
+}
+
+.danger {
+  background-color: #f7dddc;
+  * {
+    color: #682826;
+  }
+}
+
+.info {
+  background-color: #d2ebf5;
+  * {
+    color: #135d7c;
+  }
+}
+
+.success {
+  background-color: #c9ecd5;
+  * {
+    color: #2d7345;
+  }
+}
+
+.secondary {
+  background-color: white;
+  * {
+    color: #999999;
+  }
+}
+
+.primary {
+  background-color: #d1d1d1;
+  * {
+    color: #101010;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    padding: 10px;
+    cursor: pointer;
+  }
+}
+
+.bodyAlert {
+  display: flex;
+}
+
+.close {
+  height: 100%;
+  padding: 10px;
+  cursor: pointer;
+}

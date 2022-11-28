@@ -1,0 +1,128 @@
+import { Meta } from "@storybook/addon-docs";
+import { Alert } from "../tempIndex.tsx";
+
+<Meta title="Alerts" />
+
+# Overview
+
+Alerts that you can display
+
+<Alert theme="warning" title="Recordatorio creado para 20/11/2022">
+  <p
+    style={{
+      margin: "0",
+    }}
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sunt
+    inventore voluptate! Eum voluptatum ducimus atque provident quibusdam autem.
+  </p>
+</Alert>
+
+<Alert theme="danger" title="Recordatorio creado para 20/11/2022">
+  <p
+    style={{
+      margin: "0",
+    }}
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sunt
+    inventore voluptate! Eum voluptatum ducimus atque provident quibusdam autem.
+  </p>
+</Alert>
+
+<Alert theme="success" title="Recordatorio creado para 20/11/2022">
+  <p
+    style={{
+      margin: "0",
+    }}
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sunt
+    inventore voluptate! Eum voluptatum ducimus atque provident quibusdam autem.
+  </p>
+</Alert>
+
+<Alert theme="info" title="Recordatorio creado para 20/11/2022">
+  <p
+    style={{
+      margin: "0",
+    }}
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sunt
+    inventore voluptate! Eum voluptatum ducimus atque provident quibusdam autem.
+  </p>
+</Alert>
+
+<Alert theme="primary" title="Recordatorio creado para 20/11/2022">
+  <p
+    style={{
+      margin: "0",
+    }}
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sunt
+    inventore voluptate! Eum voluptatum ducimus atque provident quibusdam autem.
+  </p>
+</Alert>
+
+<Alert theme="secondary" title="Recordatorio creado para 20/11/2022">
+  <p
+    style={{
+      margin: "0",
+    }}
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sunt
+    inventore voluptate! Eum voluptatum ducimus atque provident quibusdam autem.
+  </p>
+</Alert>
+
+## Code example
+
+```tsx
+import React from "react";
+import { Alert } from "react-lux";
+
+function App() {
+  return (
+    <Alert theme="info" title="Recordatorio creado para 20/11/2022">
+      <p
+        style={{
+          margin: "0",
+        }}
+      >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sunt
+        inventore voluptate! Eum voluptatum ducimus atque provident quibusdam
+        autem minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+        facilis esse possimus ab assumenda. Ad numquam nulla fuga eveniet totam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quae
+        quaerat eveniet praesentium incidunt numquam vero quis dolor quo
+        molestias culpa debitis qui odit earum error quia, fuga pariatur! Porro
+        velit, nesciunt autem dolorem repellendus illo facilis minus,
+        necessitatibus fugiat perferendis dolore nisi dolores rerum voluptatum.
+        Repellendus labore provident in.
+      </p>
+    </Alert>
+  );
+}
+
+export default App;
+```
+
+## Types
+
+```ts
+export interface PropsAlert {
+  title?: string;
+  children?: JSX.Element | JSX.Element[];
+  /**
+   * Function that executes when the user clicks on the close icon from the top right
+   */
+  onClickClose?: () => void;
+  theme?: ThemeAlert;
+}
+
+export type ThemeAlert =
+  | "warning"
+  | "danger"
+  | "success"
+  | "info"
+  | "primary"
+  | "secondary";
+```
