@@ -1,0 +1,35 @@
+.luxSingleFile {
+  display: block;
+  width: 100%;
+  font-family: var(--fontlux);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--colorInputLux);
+  background-color: var(--backgroundInputLux);
+  background-clip: padding-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    transition: 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    &::file-selector-button {
+      background-color: #d8dbdc;
+    }
+  }
+  &:focus {
+    border: 0.25rem solid var(--borderLux);
+  }
+}
+
+.luxSingleFile::file-selector-button {
+  font-family: var(--fontlux);
+  color: var(--colorInputLux);
+  height: 100%;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+}

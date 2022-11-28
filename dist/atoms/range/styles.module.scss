@@ -1,0 +1,22 @@
+.luxRange {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  background-color: var(--backgroundInputLux);
+  height: 7.5px;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 15px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    background: var(--primaryColorLux); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  &:disabled {
+    &::-webkit-slider-thumb {
+      background: #d0d0d0;
+    }
+  }
+}

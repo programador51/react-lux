@@ -1,0 +1,29 @@
+.luxSwitch {
+  input {
+    display: none;
+  }
+
+  label {
+    transition: 0.35s;
+    cursor: pointer;
+    border: 1px solid #b9b9bb;
+    width: 30px;
+    height: 12.5px;
+    display: inline-block;
+    background-image: url("../../images/switch.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+
+  input:focus {
+    border: 3px solid var(--borderLux);
+  }
+
+  input:checked + label {
+    border: 1px solid var(--primaryColorLux);
+    background-color: var(--primaryColorLux);
+    background-image: url("../../images/switch-active.svg");
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+}

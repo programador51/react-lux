@@ -1,0 +1,60 @@
+.badgePrimary,
+.badgeSecondary,
+.badgeWarning,
+.badgeDanger,
+.badgeLight,
+.badgeInfo,
+.badgeDark,
+.badgeSuccess {
+  font-size: 0.75rem;
+  font-family: var(--fontlux);
+  padding: 0.35em 0.65em;
+}
+
+.badgeRounded {
+  span {
+    border-radius: 50rem;
+  }
+  display: inline-flex;
+}
+
+.badgePrimary {
+  background-color: var(--primaryColorLux);
+  color: white;
+}
+
+.badgeSecondary {
+  color: white;
+  color: var(--primaryColorLux);
+}
+
+.badgeSuccess {
+  color: white;
+  background-color: var(--successColorLux);
+}
+
+.badgeDanger {
+  color: white;
+  background-color: var(--dangerColorLux);
+}
+
+.badgeWarning {
+  color: white;
+  background-color: var(--warningColorLux);
+}
+
+.badgeInfo {
+  color: white;
+  background-color: var(--infoColorLux);
+}
+
+.badgeDark {
+  color: white;
+  background-color: var(--darkColorLux);
+}
+
+.badgeLight {
+  color: var(--primaryColorLux);
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
