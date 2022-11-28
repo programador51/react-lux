@@ -1,7 +1,37 @@
 {
   "name": "react-lux",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": {
+    "email": "jperezo98@hotmail.com",
+    "name": "José Luis Pérez Olguín"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "typings": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "description": "UI Kit for React",
+  "keywords": [
+    "react",
+    "frontend",
+    "front-end",
+    "FRONT-END",
+    "reactjs",
+    "REACT",
+    "REACT.JS",
+    "facebook",
+    "lux",
+    "uikit",
+    "UIKIT",
+    "user interface kit",
+    "USER INTERFACE KIT"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -10,6 +40,7 @@
     "@types/node": "^16.18.3",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
+    "commitizen": "^4.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -19,8 +50,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 1 src/**/*.scss dist/",
+    "copyttf": "copyfiles -u 1 src/**/*.ttf dist/",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run clean && tsc && npm run copy-files && npm run copyttf",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -67,7 +101,15 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/uuid": "^8.3.4",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "copyfiles": "^2.4.1",
+    "cz-conventional-changelog": "^3.3.0",
     "prop-types": "^15.8.1",
+    "rimraf": "^3.0.2",
     "webpack": "^5.75.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
