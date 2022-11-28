@@ -1,6 +1,6 @@
 {
   "name": "react-lux",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "private": false,
   "author": {
     "email": "jperezo98@hotmail.com",
@@ -58,7 +58,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "semantic-release": "semantic-release"
   },
   "eslintConfig": {
     "extends": [
@@ -105,11 +106,16 @@
     "cz-conventional-changelog": "^3.3.0",
     "prop-types": "^15.8.1",
     "rimraf": "^3.0.2",
-    "webpack": "^5.75.0"
+    "webpack": "^5.75.0",
+    "semantic-release": "^19.0.5"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/programador51/react-lux.git"
   }
 }
