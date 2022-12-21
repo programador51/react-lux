@@ -1,4 +1,3 @@
-"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -10,16 +9,10 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { useRef } from "react";
+import scss from "./styles.module.scss";
+export var Switch = function (props) {
+    var domCheckbox = useRef(null);
+    return (_jsxs("div", __assign({ className: scss.luxSwitch }, { children: [_jsx("input", __assign({ type: "checkbox", ref: domCheckbox }, props)), _jsx("label", { onClick: function () { var _a; return (_a = domCheckbox.current) === null || _a === void 0 ? void 0 : _a.click(); } })] })));
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Switch = void 0;
-var jsx_runtime_1 = require("react/jsx-runtime");
-var react_1 = require("react");
-var styles_module_scss_1 = __importDefault(require("./styles.module.scss"));
-var Switch = function (props) {
-    var domCheckbox = (0, react_1.useRef)(null);
-    return ((0, jsx_runtime_1.jsxs)("div", __assign({ className: styles_module_scss_1.default.luxSwitch }, { children: [(0, jsx_runtime_1.jsx)("input", __assign({ type: "checkbox", ref: domCheckbox }, props)), (0, jsx_runtime_1.jsx)("label", { onClick: function () { var _a; return (_a = domCheckbox.current) === null || _a === void 0 ? void 0 : _a.click(); } })] })));
-};
-exports.Switch = Switch;

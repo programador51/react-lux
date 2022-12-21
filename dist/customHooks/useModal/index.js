@@ -1,8 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = require("react");
-function useModal() {
-    var _a = (0, react_1.useState)(false), isOpen = _a[0], setIsOpen = _a[1];
+import { useState } from "react";
+export default function useModal() {
+    var _a = useState(false), isOpen = _a[0], setIsOpen = _a[1];
     /**
      * Attempt to close the modal
      * @returns {void}
@@ -19,4 +17,3 @@ function useModal() {
         openModal: openModal,
     };
 }
-exports.default = useModal;

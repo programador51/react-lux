@@ -1,4 +1,3 @@
-"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -10,14 +9,8 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
+import { jsx as _jsx } from "react/jsx-runtime";
+import scss from "./styles.module.scss";
+export var Select = function (props) {
+    return (_jsx("select", __assign({}, props, { className: scss.luxSelect }, { children: props.children })));
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Select = void 0;
-var jsx_runtime_1 = require("react/jsx-runtime");
-var styles_module_scss_1 = __importDefault(require("./styles.module.scss"));
-var Select = function (props) {
-    return ((0, jsx_runtime_1.jsx)("select", __assign({}, props, { className: styles_module_scss_1.default.luxSelect }, { children: props.children })));
-};
-exports.Select = Select;
