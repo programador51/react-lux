@@ -15,5 +15,4 @@ import { ToastProvider } from "./structure/GlobalToast";
 import { BlockQuote } from "./molecule/blockquote";
 import { Pagination } from "./molecule/pagination";
 import { Alert } from "./molecule/alerts";
-import "./global.scss";
 export { Button, Badge, H1, H2, H3, H4, H5, H6, InputFile, Checkbox, Switch, Password, Select, Range, Radio, BlockQuote, InputText, Modal, Pagination, useModal, ToastProvider, Alert, };
