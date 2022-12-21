@@ -2,6 +2,7 @@
   "name": "react-lux-kit",
   "version": "0.0.0-development",
   "private": false,
+  "homepage": "https://dreamy-madeleine-ddc376.netlify.app/?path=/story/alerts--page",
   "author": {
     "email": "jperezo98@hotmail.com",
     "name": "José Luis Pérez Olguín"
@@ -52,9 +53,10 @@
   "scripts": {
     "clean": "rimraf dist/",
     "copy-files": "copyfiles -u 1 src/**/*.scss dist/",
+    "copyimages": "copyfiles -u 1 src/**/*.svg dist/",
     "copyttf": "copyfiles -u 1 src/**/*.ttf dist/",
     "start": "react-scripts start",
-    "build": "npm run clean && tsc && npm run copy-files && npm run copyttf",
+    "build": "npm run clean && tsc && npm run copy-files && npm run copyttf && npm run copyimages",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
