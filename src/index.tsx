@@ -29,7 +29,6 @@ import { ToastProvider } from "./structure/GlobalToast";
 import { BlockQuote } from "./molecule/blockquote";
 import { Pagination } from "./molecule/pagination";
 import { Alert } from "./molecule/alerts";
-import "./global.scss";
 
 export {
   Button,
